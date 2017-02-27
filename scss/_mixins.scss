@@ -1,0 +1,12 @@
+/* -- Mixin -- */
+
+
+@mixin tablet { 
+    @media all and (min-width: 40rem) {
+    /* like a placeholder for CSS rules to be used later on the code - adjustments for tablet view-port*/
+    
+    @content;
+    
+    }
+    
+}

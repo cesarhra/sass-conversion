@@ -1,0 +1,164 @@
+/* -- Media Query -- */
+
+
+@include tablet{
+    h1 {
+		line-height: 3.5rem;
+		font-size: 2rem;
+	}
+
+	/* -- FIRST DIV -- */
+    
+    .first{
+        h1{
+            margin: 1.5rem 2rem 1.5rem 0;
+        }
+        ul { 
+            margin: 0 0 1rem 0;
+            border: none;
+            li {
+                display: inline;
+                a {
+                    display: inline;
+                    font-size: 1.2rem;
+                    padding: 0 1rem;
+                    border: none;
+                    background-color: $bg-text-border-white;
+                    border-right: 1px solid $querie-a-border-right-blue;
+                    &:hover {
+                        background-color: $bg-text-border-white;
+                        border-bottom: none;
+                        color: $ancho-hover;
+                        text-shadow: none;
+                    }
+                }
+                &:first-of-type {
+                    a { 
+                        color: $bg-text-gold;
+                        padding: 0 1rem 0 0;
+                    }
+                }
+                &:nth-of-type(6){
+                    a {
+                        border-right: none;
+                    }
+                }     
+            }
+        }         
+    }
+	
+	/* -- SECOND DIV -- */
+    
+    .bg-people{
+        a {
+            display: inline-block;
+            color: $bg-text-border-white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            margin: 0 1rem 0 0;
+            border: 1px solid $bg-text-border-white;
+            background-color: $bg-text-black;
+            transition: background-color 0.5s ease, border 0.5s ease;
+            &:hover {
+                background-color: $people-hover-blue;
+                border: 1px solid $people-hover-blue;
+            }
+        }
+	}
+	
+	/* -- THIRD DIV -- */
+    
+	.bg-gold {
+		padding: 0;
+        ul{
+            &::after { 
+            content: "";
+            display: block;
+            clear: both;
+            }
+            li {
+                width: 25%; 
+                float: left;
+                text-align: center;
+                border: none;
+                span {
+                    display: block;
+                    &:first-child { 
+                        padding: 1.5rem 0 0 0;
+                        margin: 2rem auto 1rem auto;
+                        width: 5.5rem;
+                        height: 5.5rem;
+                        border-radius: 45px;
+                        background-color: $bg-text-border-white;
+                    }
+                    &:last-child {
+                        margin: 0 auto 2rem auto;
+                    }
+                }
+                a {
+                    background-color: transparent;
+                    text-decoration: none;
+                    border: none;
+                    span{
+                        &:first-child { 
+                            border: 4px solid $bg-text-border-white;
+                        }
+                    }
+                    &:hover{
+                        span{
+                            &:first-child { 
+                                border: 4px solid $border-text-mild-gray;
+                            }
+                            &:last-child { 
+                                color: $border-text-mild-gray;
+                            }
+                        }    
+                    }
+                }
+            }    
+	    }
+	}
+				
+	/* -- FOURTH DIV -- */
+    
+    .second{
+        &::after{ 
+            content: "";
+            display: block;
+            clear: both;
+        }
+	    ul li{
+            width: 25%;
+	    }
+	    .names {
+		    margin: 0.5rem 0;
+	    }
+	    p{
+            width: 50%;
+            float: left;
+	    }
+	}
+    
+	/* -- FIFTH DIV -- */
+    
+    .bg-black{ 
+        .container {
+            width: 50%;
+            float: left;
+            padding: 0 2rem 0 0;
+            img {
+                width: 80%;
+            }
+	    } 
+        .box{
+             &::after {
+            content: "";
+            display: block;
+            clear: both;
+            }
+        }
+        .form-box {
+            padding: 0.5rem;
+        }
+	}	
+}
